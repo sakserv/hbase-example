@@ -11,6 +11,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <slf4j.version>1.7.10</slf4j.version>
         <junit.version>4.11</junit.version>
+        <hadoop-mini-clusters.version>0.0.13</hadoop-mini-clusters.version>
+        <hbase.version>0.98.6-hadoop2</hbase.version>
+        <hadoop.version>2.6.0</hadoop.version>
     </properties>
 
     <repositories>
@@ -41,6 +44,23 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.sakserv</groupId>
+            <artifactId>hadoop-mini-clusters</artifactId>
+            <version>${hadoop-mini-clusters.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-testing-util</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>${hadoop.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
